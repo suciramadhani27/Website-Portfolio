@@ -99,8 +99,11 @@ h6 {
 
 .top-header img {
     height: 200px;
+    width: 200px;
     margin-bottom: 30px;
     border: 15px solid rgba(256, 256, 256, .1);
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .top-header h1 {
@@ -159,11 +162,11 @@ h6 {
     .header {
         height: 50px;
     }
-    
+
     .header .logo {
         margin: 10px 0 0 0;
     }
-    
+
     .header .logo h1 {
         padding: 2px 0;
         font-size: 26px;
@@ -184,7 +187,8 @@ h6 {
     color: rgba(255, 255, 255, 0.75);
 }
 
-.nav-menu, .nav-menu * {
+.nav-menu,
+.nav-menu * {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -203,12 +207,12 @@ h6 {
     white-space: nowrap;
 }
 
-.nav-menu > li {
+.nav-menu>li {
     float: left;
 }
 
-.nav-menu li:hover > ul,
-.nav-menu li.sfHover > ul {
+.nav-menu li:hover>ul,
+.nav-menu li.sfHover>ul {
     display: block;
 }
 
@@ -259,8 +263,8 @@ h6 {
 }
 
 .nav-menu a:hover,
-.nav-menu li:hover > a,
-.nav-menu .menu-active > a {
+.nav-menu li:hover>a,
+.nav-menu .menu-active>a {
     color: #000000;
 }
 
@@ -327,7 +331,7 @@ h6 {
     #mobile-nav-toggle {
         display: inline;
     }
-    
+
     .logo {
         width: 100%;
         text-align: center;
@@ -566,84 +570,87 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* ------- Experience CSS ------ */
 /* ============================= */
 
+/* Experience Section Container */
 .experience {
+    padding: 50px 0;
+    background: #ffffff;
+}
+
+.experience section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.experience h2 {
+    color: #AF9483;
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #AF9483;
+}
+
+/* Lists Styling */
+.experience ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.experience ul li {
+    margin-bottom: 15px;
+    padding-left: 20px;
     position: relative;
-    padding: 0;
 }
 
-.experience .section-header p {
-    margin:0;
-}
-
-.experience .exp-column {
-    margin-top: 30px;
-    padding: 25px 30px;
-    background: #e9ecef;
-}
-
-.experience .exp-column::before {
+.experience ul li:before {
+    content: "•";
+    color: #AF9483;
     position: absolute;
-    content: "";
-    height: 3px;
-    top: 30px;
-    right: 100%;
-    left: 15px;
-    background: #AF9483;
+    left: 0;
 }
 
-.experience .exp-column::after {
-    position: absolute;
-    content: "";
-    height: 3px;
-    bottom: 0;
-    right: 15px;
-    left: 100%;
-    background: #AF9483;
+/* Skills Styling */
+.skill {
+    margin-bottom: 20px;
 }
 
-.experience .exp-column:hover::before {
-    transition: .3s;
-    right: 15px;
-}
-
-.experience .exp-column:hover::after {
-    transition: .3s;
-    left: 15px;
-}
-
-.experience .exp-date {
+.skill label {
+    display: block;
     margin-bottom: 5px;
     color: #666666;
-    font-size: 16px;
-    font-weight: 300;
-    letter-spacing: 2px;
+    font-weight: 500;
 }
 
-.experience .exp-date span {
-    font-weight: 400;
-    font-style: italic;
+.bar {
+    background: #e9ecef;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
-.experience .exp-company {
-    margin-bottom: 0;
-    color: #AF9483;
-    font-size: 18px;
-    font-weight: 400;
+.fill {
+    height: 100%;
+    background: #AF9483;
+    transition: width 1s ease-in-out;
+    border-radius: 5px;
 }
 
-.experience .exp-designation {
-    margin-bottom: 10px;
-    color: #999999;
-    font-size: 16px;
-    font-weight: 400;
-    font-style: italic;
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .experience section {
+        padding: 15px;
+    }
+
+    .experience h2 {
+        font-size: 20px;
+    }
+
+    .skill label {
+        font-size: 14px;
+    }
 }
-
-.experience .exp-detail {
-    margin-bottom: 0;
-}
-
-
 
 /* ============================= */
 /* -------- Services CSS ------- */
@@ -660,14 +667,14 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .services .section-header p {
-    margin:0;
+    margin: 0;
 }
 
 .services .single-service {
     position: relative;
     text-align: center;
     font-weight: 300;
-    margin:30px 0 0;
+    margin: 30px 0 0;
     padding: 25px 15px 30px 15px;
     background: #e9ecef;
 }
@@ -821,7 +828,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     height: 220px;
     position: relative;
     border-radius: 0;
-    margin: 0; 
+    margin: 0;
 }
 
 .portfolio .portfolio-item figure:hover img {
@@ -908,98 +915,6 @@ body.mobile-nav-active #mobile-nav-toggle {
     opacity: 1;
     top: 50%;
 }
-
-
-
-
-
-/* ============================= */
-/* ------ Testimonials CSS ----- */
-/* ============================= */
-
-.testimonials {
-    background: url("../img/testimonial-bg.jpg") center top no-repeat fixed;
-    background-size: cover;
-    padding: 40px 0 60px 0;
-    text-align: center;
-    position: relative;
-}
-
-.testimonials .container {
-    max-width: 700px;
-}
-
-.testimonials::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background: rgba(000, 000, 000, 0.7);
-}
-
-.testimonials .container {
-    position: relative;
-    z-index: 9;
-}
-
-
-.testimonials i {
-    padding: 20px 0;
-    color: #AF9483;
-}
-
-.testimonials .testimonial-item {
-    text-align: center;
-}
-
-.testimonials .testimonial-item .testimonial-img {
-    width: 120px;
-    border: 10px solid rgba(256, 256, 256, .1);
-    margin: 0 auto;
-}
-
-.testimonials .testimonial-item h3 {
-    font-size: 20px;
-    font-weight: 400;
-    margin: 15px 0 5px 0;
-    color: #AF9483;
-}
-
-.testimonials .testimonial-item h4 {
-    color: #999999;
-    font-size: 16px;
-    font-weight: 400;
-    font-style: italic;
-    margin: 0 0 10px 0;
-}
-
-.testimonials .testimonial-item p {
-    color: #ffffff;
-    font-weight: 300;
-    margin: 0 auto;
-}
-
-.testimonials .owl-nav,
-.testimonials .owl-dots {
-    margin-top: 5px;
-    text-align: center;
-}
-
-.testimonials .owl-dot {
-    display: inline-block;
-    margin: 0 5px;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: #ffffff;
-}
-
-.testimonials .owl-dot.active {
-    background-color: #AF9483;
-}
-
 
 
 /* ============================= */
