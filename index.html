@@ -24,7 +24,9 @@
     <link href="css/style.css" rel="stylesheet">
 
     <style>
-        /* Certificate Cards */
+        /* =====================
+           CERTIFICATE CARDS
+        ===================== */
         .certificate-card {
             border: 1px solid #e0e0e0;
             border-radius: 10px;
@@ -60,42 +62,33 @@
             margin-bottom: 8px;
         }
 
-        /* Project Cards */
+        /* =====================
+           PROJECT CARDS
+        ===================== */
         .project-card {
             border: 1px solid #e0e0e0;
             border-radius: 10px;
             overflow: hidden;
-            margin-bottom: 24px;
+            margin-bottom: 32px;
             transition: box-shadow 0.3s;
             background: #fff;
         }
 
         .project-card:hover {
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-        }
-
-        .project-card .project-img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            background: #f0f4fa;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 48px;
-            color: #4a90d9;
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.13);
         }
 
         .project-card .project-body {
-            padding: 16px;
+            padding: 20px;
         }
 
         .project-card h5 {
             font-weight: 700;
             margin-bottom: 6px;
+            font-size: 17px;
         }
 
-        .project-card .badge-tool {
+        .badge-tool {
             background: #e8f0fe;
             color: #4a90d9;
             border-radius: 20px;
@@ -106,6 +99,116 @@
             display: inline-block;
         }
 
+        /* =====================
+           CASE STUDY BLOCK
+        ===================== */
+        .case-study {
+            background: #f8faff;
+            border-left: 4px solid #4a90d9;
+            border-radius: 0 8px 8px 0;
+            padding: 16px 20px;
+            margin-top: 16px;
+        }
+
+        .case-study h6 {
+            font-weight: 700;
+            color: #4a90d9;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+        }
+
+        .case-study .cs-block {
+            margin-bottom: 10px;
+        }
+
+        .case-study .cs-label {
+            font-weight: 700;
+            font-size: 13px;
+            color: #333;
+        }
+
+        .case-study .cs-text {
+            font-size: 13px;
+            color: #555;
+            margin: 0;
+        }
+
+        .cs-row {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 4px;
+        }
+
+        .cs-tag {
+            background: #fff;
+            border: 1px solid #4a90d9;
+            color: #4a90d9;
+            border-radius: 20px;
+            padding: 2px 10px;
+            font-size: 12px;
+        }
+
+        .figma-btn {
+            display: inline-block;
+            margin-top: 12px;
+            background: #4a90d9;
+            color: #fff !important;
+            border-radius: 6px;
+            padding: 7px 18px;
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+
+        .figma-btn:hover {
+            background: #2d6cb5;
+            text-decoration: none;
+        }
+
+        .figma-btn i {
+            margin-right: 6px;
+        }
+
+        /* =====================
+           SKILLS SECTION
+        ===================== */
+        .section-skills {
+            padding: 60px 0;
+            background: #fff;
+        }
+
+        .skill-group {
+            margin-bottom: 28px;
+        }
+
+        .skill-group h6 {
+            font-weight: 700;
+            color: #4a90d9;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            background: #f0f4fa;
+            color: #333;
+            border-radius: 20px;
+            padding: 5px 14px;
+            font-size: 13px;
+            margin-right: 6px;
+            margin-bottom: 6px;
+            border: 1px solid #e0e0e0;
+        }
+
+        /* =====================
+           SECTIONS
+        ===================== */
         .section-certificates,
         .section-projects {
             padding: 60px 0;
@@ -113,6 +216,10 @@
 
         .section-certificates {
             background: #f8f9fa;
+        }
+
+        .section-projects {
+            background: #fff;
         }
     </style>
 </head>
@@ -129,7 +236,7 @@
                     <h1>Hi, I'm Suci Ramadhani</h1>
                 </div>
                 <div class="col-md-12">
-                    <p>Aspiring UI/UX Designer</p>
+                    <p>UI/UX Designer</p>
                     <h2></h2>
                 </div>
             </div>
@@ -147,8 +254,9 @@
                 <ul class="nav-menu">
                     <li><a href="#top-header">Home</a></li>
                     <li><a href="#about">About Me</a></li>
-                    <li><a href="#certificates">Certificates</a></li>
+                    <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#certificates">Certificates</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -156,7 +264,7 @@
     </div>
     <!-- Nav End -->
 
-    <!-- About Me Start-->
+    <!-- About Me Start -->
     <div class="about" id="about">
         <div class="container">
             <div class="row align-items-center">
@@ -168,20 +276,255 @@
                         <h2>About Me</h2>
                     </header>
                     <header>
-                        <h3>Passionate UI/UX Designer</h3>
+                        <h3>UI/UX Designer — Problem Solver, User-Centric Thinker</h3>
                     </header>
                     <p>
-                        I am a graduate of Vocational High School majoring in Software Engineering with a strong
-                        interest in UI/UX Design. I am experienced in using Figma and have a solid understanding of
-                        design fundamentals such as layout, color, and typography. I enjoy creating designs that are
-                        simple, engaging, and easy to understand.
+                        I am a UI/UX Designer and Software Engineering graduate from SMK Negeri 1 Subang with hands-on
+                        experience designing digital products from scratch. I translate complex user needs into simple,
+                        intuitive, and functional interfaces — from user flows and wireframes to high-fidelity
+                        prototypes.
                     </p>
-                    <a href="cv/suci-ramadhani-cv.pdf" download>Download CV</a>
+                    <p>
+                        I work primarily with <strong>Figma</strong> for UI design and prototyping, and I have a
+                        foundational understanding of <strong>HTML & CSS</strong> which helps me design with developer
+                        handoff in mind. I am detail-oriented, eager to learn, and thrive in collaborative team
+                        environments.
+                    </p>
+                    <a href="cv/suci-ramadhani-cv.pdf" download class="figma-btn" style="margin-top:0;">
+                        <i class="fa fa-download"></i> Download CV
+                    </a>
                 </div>
             </div>
         </div>
     </div>
     <!-- About Me End -->
+
+    <!-- Skills Start -->
+    <div class="section-skills" id="skills">
+        <div class="container">
+            <header class="section-header mb-5">
+                <h2>Skills</h2>
+                <p>Tools and capabilities I bring to every project</p>
+            </header>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="skill-group">
+                        <h6>Design Tools</h6>
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">Canva</span>
+                    </div>
+                    <div class="skill-group">
+                        <h6>Design Skills</h6>
+                        <span class="skill-tag">UI Design</span>
+                        <span class="skill-tag">Wireframing</span>
+                        <span class="skill-tag">Prototyping</span>
+                        <span class="skill-tag">User Flow</span>
+                        <span class="skill-tag">Responsive Design</span>
+                        <span class="skill-tag">Layout & Typography</span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-group">
+                        <h6>Technical</h6>
+                        <span class="skill-tag">HTML (Basic)</span>
+                        <span class="skill-tag">CSS (Basic)</span>
+                        <span class="skill-tag">Design Handoff</span>
+                    </div>
+                    <div class="skill-group">
+                        <h6>Process</h6>
+                        <span class="skill-tag">User-Centered Design</span>
+                        <span class="skill-tag">Design Thinking</span>
+                        <span class="skill-tag">Usability Testing</span>
+                        <span class="skill-tag">Iterative Design</span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-group">
+                        <h6>Soft Skills</h6>
+                        <span class="skill-tag">Team Collaboration</span>
+                        <span class="skill-tag">Communication</span>
+                        <span class="skill-tag">Detail-Oriented</span>
+                        <span class="skill-tag">Adaptable</span>
+                        <span class="skill-tag">Problem Solving</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Skills End -->
+
+    <!-- Projects Start -->
+    <div class="section-projects" id="projects">
+        <div class="container">
+            <header class="section-header mb-5">
+                <h2>Projects</h2>
+                <p>Selected UI/UX work with design thinking process</p>
+            </header>
+            <div class="row justify-content-center">
+
+                <!-- Project 1 - Sawit Detection App -->
+                <div class="col-md-10 col-lg-10">
+                    <div class="project-card">
+                        <a href="img/project-sawit.jpg" data-lightbox="projects"
+                            data-title="Sawit Detection App — AI-Powered Oil Palm Monitoring App">
+                            <img src="img/project-sawit.jpg" alt="Sawit Detection App"
+                                style="width:100%;height:280px;object-fit:cover;">
+                        </a>
+                        <div class="project-body">
+                            <h5>Sawit Detection App — AI-Powered Oil Palm Monitoring App</h5>
+                            <p>A mobile app UI design for monitoring oil palm plantations using drone and AI technology.
+                                Designed to help plantation supervisors detect fruit bunch ripeness in real-time and
+                                generate block-by-block harvest reports.</p>
+
+                            <span class="badge-tool">Figma</span>
+                            <span class="badge-tool">UI Design</span>
+                            <span class="badge-tool">Wireframing</span>
+                            <span class="badge-tool">Prototyping</span>
+                            <span class="badge-tool">Mobile App</span>
+
+                            <div class="case-study">
+                                <h6>📋 Case Study</h6>
+
+                                <div class="cs-block">
+                                    <span class="cs-label">🎯 Brief</span>
+                                    <p class="cs-text">Design challenge given by PT Makerindo as part of internship
+                                        selection. Task: design 3 core screens of a mobile app for oil palm plantation
+                                        supervisors who need fast, data-driven decisions in the field.</p>
+                                </div>
+
+                                <div class="cs-block">
+                                    <span class="cs-label">👤 Target User</span>
+                                    <p class="cs-text">Plantation supervisors and operational managers with high
+                                        mobility who need real-time data from drone-based AI detection.</p>
+                                </div>
+
+                                <div class="cs-block">
+                                    <span class="cs-label">🔍 Design Problem</span>
+                                    <p class="cs-text">How to present complex drone + AI data (live camera feed,
+                                        ripeness detection, harvest reports) in a mobile interface that is fast to read
+                                        and easy to act on in the field?</p>
+                                </div>
+
+                                <div class="cs-block">
+                                    <span class="cs-label">✏️ Design Process</span>
+                                    <div class="cs-row">
+                                        <span class="cs-tag">1. Read & Analyze Brief</span>
+                                        <span class="cs-tag">2. Define User Needs</span>
+                                        <span class="cs-tag">3. Sketch User Flow</span>
+                                        <span class="cs-tag">4. High-Fidelity UI in Figma</span>
+                                    </div>
+                                </div>
+
+                                <div class="cs-block">
+                                    <span class="cs-label">📱 Screens Designed</span>
+                                    <div class="cs-row">
+                                        <span class="cs-tag">Dashboard (weather, drone status, ripeness summary)</span>
+                                        <span class="cs-tag">Live Drone View (real-time AI detection with bounding
+                                            box)</span>
+                                        <span class="cs-tag">Report & Recap (charts, flight history per block)</span>
+                                    </div>
+                                </div>
+
+                                <div class="cs-block">
+                                    <span class="cs-label">💡 Design Decisions</span>
+                                    <p class="cs-text">Used a dark green color palette to reflect the plantation context
+                                        and ensure good contrast outdoors. Priority information (ripeness count, drone
+                                        battery, emergency button) placed in thumb-reachable zones for mobile usability.
+                                    </p>
+                                </div>
+
+                                <a href="https://www.figma.com/design/XJlZBYeczGZNs5WZZrsAh6/deteksi-sawit?node-id=0-1"
+                                    target="_blank" class="figma-btn">
+                                    <i class="fa fa-external-link"></i> View Figma Design
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 - SIMKOS -->
+                <div class="col-md-10 col-lg-10">
+                    <div class="project-card">
+                        <a href="img/project-simkos.jpg" data-lightbox="projects"
+                            data-title="SIMKOS – Boarding House Management System">
+                            <img src="img/project-simkos.jpg" alt="SIMKOS"
+                                style="width:100%;height:280px;object-fit:cover;">
+                        </a>
+                        <div class="project-body">
+                            <h5>SIMKOS — Boarding House Management System</h5>
+                            <p>A desktop web application UI for managing boarding house rooms, rental transactions, and
+                                income reports — with role-based access for Admin, Cashier, and Owner.</p>
+
+                            <span class="badge-tool">Figma</span>
+                            <span class="badge-tool">UI Design</span>
+                            <span class="badge-tool">Wireframing</span>
+                            <span class="badge-tool">Desktop Web App</span>
+                            <span class="badge-tool">Role-Based UI</span>
+
+                            <div class="case-study">
+                                <h6>📋 Case Study</h6>
+
+                                <div class="cs-block">
+                                    <span class="cs-label">🎯 Brief</span>
+                                    <p class="cs-text">Final competency exam project (UKK) — design and build a boarding
+                                        house rental system. Designed the full UI in Figma before implementation,
+                                        covering all 3 user roles: Admin, Cashier, and Owner.</p>
+                                </div>
+
+                                <div class="cs-block">
+                                    <span class="cs-label">👤 Target Users</span>
+                                    <p class="cs-text">3 distinct user roles: Admin (manages rooms & users), Cashier
+                                        (handles transactions), Owner (monitors reports & activity logs).</p>
+                                </div>
+
+                                <div class="cs-block">
+                                    <span class="cs-label">🔍 Design Problem</span>
+                                    <p class="cs-text">How to design a single system that serves 3 different user roles
+                                        with different tasks and permissions, while keeping the interface clean and easy
+                                        to navigate for each role?</p>
+                                </div>
+
+                                <div class="cs-block">
+                                    <span class="cs-label">✏️ Design Process</span>
+                                    <div class="cs-row">
+                                        <span class="cs-tag">1. Analyze Requirements</span>
+                                        <span class="cs-tag">2. Define User Roles & Flows</span>
+                                        <span class="cs-tag">3. Design Mockup in Figma</span>
+                                        <span class="cs-tag">4. Implement to Code</span>
+                                    </div>
+                                </div>
+
+                                <div class="cs-block">
+                                    <span class="cs-label">🖥️ Key Screens</span>
+                                    <div class="cs-row">
+                                        <span class="cs-tag">Admin Dashboard (room stats, user status)</span>
+                                        <span class="cs-tag">Room Management (card layout with availability
+                                            status)</span>
+                                        <span class="cs-tag">Transaction History</span>
+                                        <span class="cs-tag">Owner Report View</span>
+                                    </div>
+                                </div>
+
+                                <div class="cs-block">
+                                    <span class="cs-label">💡 Design Decisions</span>
+                                    <p class="cs-text">Designed separate dashboard views per role so each user only sees
+                                        what's relevant to their task. Used card-based layout for room data to make
+                                        availability status instantly readable at a glance.</p>
+                                </div>
+
+                                <a href="https://www.figma.com/design/GpTjLKR3l045r2Ok83umO2/Desain-UI-UX-Simkos?node-id=2068-426"
+                                    target="_blank" class="figma-btn">
+                                    <i class="fa fa-external-link"></i> View Figma Design
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Projects End -->
 
     <!-- Certificates Start -->
     <div class="section-certificates" id="certificates">
@@ -216,7 +559,7 @@
                             <img src="img/sertifikat-landing-page.jpg" alt="Sertifikat Landing Page"
                                 style="width:100%; border-radius:8px; margin-bottom:10px;">
                         </a>
-                        <h5>Training:Creating Landing Pages</h5>
+                        <h5>Training: Creating Landing Pages</h5>
                         <p class="cert-issuer"><i class="fa fa-building"></i> Digitech University</p>
                         <p class="cert-date"><i class="fa fa-calendar"></i> June 2025</p>
                     </div>
@@ -256,150 +599,6 @@
         </div>
     </div>
     <!-- Certificates End -->
-
-    <!-- Projects Start -->
-    <div class="section-projects" id="projects">
-        <div class="container">
-            <header class="section-header mb-5">
-                <h2>Projects</h2>
-                <p>Projects I've worked on</p>
-            </header>
-            <div class="row justify-content-center">
-                <!-- Proyek 1 - Magang -->
-                <div class="col-md-6">
-                    <div class="project-card">
-                        <div class="project-img">
-                            <a href="img/project-sawit.jpg" data-lightbox="projects"
-                                data-title="Sawit Detection App — AI-Powered Oil Palm Monitoring App">
-                                <img src="img/project-sawit.jpg" alt=" Sawit Detection App"
-                                    style="width:100%;height:220px;object-fit:cover;"
-                                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-                            </a>
-                            <div
-                                style="display:none;width:100%;height:220px;align-items:center;justify-content:center;background:#f0f4fa;font-size:48px;color:#4a90d9;">
-                                <i class="fa fa-home"></i>
-                            </div>
-                        </div>
-                        <div class="project-body">
-                            <p></p>
-                            <h5>Sawit Detection App — AI-Powered Oil Palm Monitoring App</h5>
-                            <p>A mobile app that uses drone and AI technology to monitor oil palm plantations, detecting
-                                fruit bunch ripeness in real-time and generating block-by-block harvest reports.
-
-                            </p>
-                            <span class="badge-tool">Figma</span>
-                            <span class="badge-tool">UI Design</span>
-                            <span class="badge-tool">Wireframing</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Proyek 1 - SIMKOS -->
-                <div class="col-md-6">
-                    <div class="project-card">
-                        <div class="project-img">
-                            <!-- Taruh screenshot SIMKOS di img/project-simkos.jpg -->
-                            <a href="img/project-simkos.jpg" data-lightbox="projects"
-                                data-title="SIMKOS – Boarding House Management System">
-                                <img src="img/project-simkos.jpg" alt="SIMKOS"
-                                    style="width:100%;height:220px;object-fit:cover;"
-                                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-                            </a>
-                            <div
-                                style="display:none;width:100%;height:220px;align-items:center;justify-content:center;background:#f0f4fa;font-size:48px;color:#4a90d9;">
-                                <i class="fa fa-home"></i>
-                            </div>
-                        </div>
-                        <div class="project-body">
-                            <p></p>
-                            <h5>SIMKOS – Boarding House Management System</h5>
-                            <p> A desktop application for managing boarding rooms, rental transactions, and income
-                                reports, featuring a dashboard and transaction history.
-
-                            </p>
-                            <span class="badge-tool">C#</span>
-                            <span class="badge-tool">Visual Studio Community</span>
-                            <span class="badge-tool">Guna UI2</span>
-                            <span class="badge-tool">MySQL</span>
-                            <span class="badge-tool">Laragon</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Proyek 2 - Book Store -->
-                <div class="col-md-6">
-                    <div class="project-card">
-                        <div class="project-img">
-                            <!-- Taruh screenshot toko buku di img/project-bookstore.jpg -->
-                            <a href="img/project-bookstore.jpg" data-lightbox="projects"
-                                data-title="Book Store – Web Based Bookstore Application">
-                                <img src="img/project-bookstore.jpg" alt="Book Store"
-                                    style="width:100%;height:220px;object-fit:cover;"
-                                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-                            </a>
-                            <div
-                                style="display:none;width:100%;height:220px;align-items:center;justify-content:center;background:#f0f4fa;font-size:48px;color:#4a90d9;">
-                                <i class="fa fa-book"></i>
-                            </div>
-                        </div>
-                        <div class="project-body">
-                            <p></p>
-                            <h5>Book Store – Web Based Bookstore Application</h5>
-                            <p>A web application for managing a bookstore with CRUD features, inventory management,
-                                sales dashboard, and Excel export.
-
-                            </p>
-                            <span class="badge-tool">Laravel</span>
-                            <span class="badge-tool">PHP</span>
-                            <span class="badge-tool">HTML</span>
-                            <span class="badge-tool">CSS</span>
-
-                            <span class="badge-tool">JavaScript</span>
-                            <span class="badge-tool">MySQL</span>
-                            <span class="badge-tool">Laragon</span>
-                            <span class="badge-tool">VS Code</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Proyek 2 - Book Store -->
-                <div class="col-md-6">
-                    <div class="project-card">
-                        <div class="project-img">
-                            <!-- Taruh screenshot toko buku di img/project-bookstore.jpg -->
-                            <a href="img/project-attendance.jpg" data-lightbox="projects"
-                                data-title="Attendance App – Student Internship Attendance Application">
-                                <img src="img/project-attendance.jpg" alt="Attendance App"
-                                    style="width:100%;height:220px;object-fit:cover;"
-                                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-                            </a>
-                            <div
-                                style="display:none;width:100%;height:220px;align-items:center;justify-content:center;background:#f0f4fa;font-size:48px;color:#4a90d9;">
-                                <i class="fa fa-book"></i>
-                            </div>
-                        </div>
-                        <div class="project-body">
-                            <p></p>
-                            <h5>Attendance App – Student PKL Attendance Application</h5>
-                            <p>A web application for monitoring student attendance, equipped with daily attendance
-                                features, student data management, and company management.
-
-                            </p>
-                            <span class="badge-tool">Laravel</span>
-                            <span class="badge-tool">PHP</span>
-                            <span class="badge-tool">HTML</span>
-                            <span class="badge-tool">CSS</span>
-
-                            <span class="badge-tool">JavaScript</span>
-                            <span class="badge-tool">MySQL</span>
-                            <span class="badge-tool">Laragon</span>
-                            <span class="badge-tool">VS Code</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <!-- Projects End -->
 
     <!-- Contact Start -->
     <div class="contact" id="contact">
